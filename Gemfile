@@ -6,40 +6,70 @@ gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
+
+gem 'rails-i18n', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'therubyracer', platforms: :ruby
+gem 'jquery-rails', '~> 3.1.1'
+gem 'jquery-ui-rails'
 gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'jquery-turbolinks'
+gem 'jbuilder', '~> 2.2.4'
+gem 'twitter-bootstrap-rails', '~> 2.2.8'
+gem 'less', '~> 2.6.0'
+gem 'less-rails', '~> 2.6.0'
+gem 'carrierwave'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'devise', '~> 3.4.1'
+gem 'devise_invitable', '~> 1.4.0'
+gem 'devise-i18n'
+gem 'cancancan', '~> 1.9.2'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+gem 'simple_form', '~> 3.1.0'
+gem 'haml-rails', '~> 0.5.3'
+gem 'rb-readline'
+gem 'responders', '~> 2.0'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'exception_notification', '~> 4.0.1'
+gem 'brdinheiro', '~> 3.3.0'
+gem 'brstring', '~> 3.3.0'
+gem 'brcep', '~> 3.3.0'
+gem 'jc-validates_timeliness'
+gem 'cpf_cnpj', '~> 0.2.0'
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+gem 'jquery-inputmask-rails'
+# A versao mais recente tem um bug, ver
+# https://github.com/net-ssh/net-ssh/issues/145
+gem 'net-ssh', '2.7.0'
 
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+gem 'cocoon', '~> 1.2.6'
+# gem 'rattes', git: 'https://github.com/nsi-iff/rattes.git'
+gem 'active_type', '~> 0.3.1'
+gem 'date_helper'
+gem 'money', '~> 6.5.0'
+gem 'ransack', '~> 1.5.1'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+
+group :doc do
+  gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'capybara', '~> 2.4.1'
+  gem 'poltergeist', '~> 1.5.0'
+  gem 'rspec-rails', '~> 3.1.0'
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'launchy', '~> 2.4.2'
+  gem 'shoulda-matchers'
+  gem 'pry-rails', '~> 0.3.2'
+  gem 'rspec-collection_matchers', '~> 1.1.2'
+  gem 'faker'
+  gem 'rspec-activemodel-mocks', '~> 1.0.1'
+  gem 'timecop'
+end
+
+group :development do
+  gem 'brakeman'
+end
