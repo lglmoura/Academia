@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @modalidade.nome
+
+= link_to 'Edit', edit_modalidade_path(@modalidade)
+\|
+= link_to 'Back', modalidades_path
