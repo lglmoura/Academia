@@ -1,0 +1,10 @@
+= simple_form_for(@treino) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :aluno,  label_method: :nome
+    = f.association :modalidade , label_method: :nome
+    = f.input :horario, label: "Horário"
+
+  .form-actions
+    = f.submit "Salvar"

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Aluno:
+  = @treino.aluno.nome
+%p
+  %b Modalidade:
+  = @treino.modalidade.nome
+%p
+  %b Horário:
+  = @treino.horario
+
+= link_to 'Edit', edit_treino_path(@treino)
+\|
+= link_to 'Back', treinos_path

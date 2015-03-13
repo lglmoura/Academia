@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :treinos
+
   resources :modalidades
 
   resources :alunos

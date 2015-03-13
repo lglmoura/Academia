@@ -61,6 +61,7 @@ group :development, :test do
   gem 'poltergeist', '~> 1.5.0'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'valid_attribute', '~> 2.0.0'
   gem 'launchy', '~> 2.4.2'
   gem 'shoulda-matchers'
   gem 'pry-rails', '~> 0.3.2'
@@ -68,7 +69,10 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-activemodel-mocks', '~> 1.0.1'
   gem 'timecop'
+  gem 'selenium-webdriver'
 end
+
+
 
 group :development do
   gem 'brakeman'

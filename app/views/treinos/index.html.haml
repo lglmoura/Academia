@@ -1,0 +1,23 @@
+%h1 Listing treinos
+
+%table
+  %tr
+    %th Aluno
+    %th Modalidade
+    %th Horario
+    %th
+    %th
+    %th
+
+  - @treinos.each do |treino|
+    %tr
+      %td= treino.aluno
+      %td= treino.modalidade
+      %td= treino.horario
+      %td= link_to 'Show', treino
+      %td= link_to 'Edit', edit_treino_path(treino)
+      %td= link_to 'Excluir', treino, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Treino', new_treino_path
